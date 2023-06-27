@@ -1,0 +1,36 @@
+public class Project1 {
+    public static void main(String[] args) {
+        System.out.println("Enter a Number:");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int i,j,N=1;
+        int matrix[][]=new int[a][a];
+        for(int k=0;k<=a-1;k++){
+            i=k;
+            j=0;
+            while(i>=0){
+            matrix[i][j]=N;
+            i=i-1;
+            j=j+1;
+            N++;
+            }
+        }
+        for(int k=1;k<=a-1;k++){
+            i=a-1;
+            j=k;
+            while(j<=a-1){
+            matrix[i][j]=N;
+            i=i-1;
+            j=j+1;
+            N++;
+            }
+        }
+        for(i=0;i<a;i++){
+    for(j=0;j<a;j++){
+        System.out.print(matrix[i][j]+"   ");
+    }
+     System.out.println();
+}
+
+    }
+    }
